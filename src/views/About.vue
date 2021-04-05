@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <h3>{{getCurrentClicker}}</h3>
     <Clicker index="1"/>
     <Clicker index="2"/>
     <Clicker index="3"/>
@@ -7,10 +8,18 @@
 </template>
 
 <script>
+
+import {mapGetters} from 'vuex';
+
 import Clicker from '../components/Clicker';
 
 export default {
-  components: {Clicker}  
+  components: {Clicker},
+  computed: {
+    ...mapGetters({
+      getCurrentClicker: 'currentClicker'
+    })
+  }
 }
 
 </script>

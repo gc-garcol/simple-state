@@ -3,7 +3,7 @@
         :class="activeClass"
         @click="changeIndex"
     >
-
+    index = {{index}}
     </div>
 </template>
 
@@ -55,6 +55,11 @@ export default {
     width: 200px;
     height: 100px;
     background-color: #000;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &.activeBg {
         background-color: rgb(66, 157, 14);
